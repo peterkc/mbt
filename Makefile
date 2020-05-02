@@ -15,6 +15,8 @@ build: clean
 .PHONY: clean
 clean:
 	rm -rf build
+	rm -rf vendor/libgit2/build
+	rm -rf vendor/libgit2/install
 
 .PHONY: restore
 restore:

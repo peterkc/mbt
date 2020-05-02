@@ -9,3 +9,5 @@ vendor/libgit2/build/
 vendor/libgit2/install/
 
 .idea/
+/vendor/libgit2
+/vendor/github.com/libgit2/git2go

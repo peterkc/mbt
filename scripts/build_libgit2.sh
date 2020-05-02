@@ -3,7 +3,7 @@
 set -e
 
 DIR=$(pwd)
-LIBGIT2_PATH=$DIR/vendor/libgit2
+LIBGIT2_PATH="$GOPATH/src/github.com/libgit2/git2go/vendor/libgit2"
 
 cd $LIBGIT2_PATH &&
 mkdir -p install/lib &&

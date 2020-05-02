@@ -17,15 +17,16 @@ lint() {
 }
 
 DIR=$(pwd)
-LIBGIT2_PATH=$DIR/vendor/libgit2
 OS=$(uname -s | awk '{print tolower($0)}')
 ARCH=$(uname -m)
 
 # Restore build dependencies
+go get -t -v
 go get golang.org/x/tools/cmd/cover
 go get github.com/mattn/goveralls
 
 # Build libgit2
+LIBGIT2_PATH="$GOPATH/src/github.com/libgit2/git2go/vendor/libgit2"
 ./scripts/build_libgit2.sh
 
 # Set environment so to static link libgit2 when building git2go
